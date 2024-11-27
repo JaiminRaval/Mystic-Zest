@@ -58,13 +58,37 @@
 			children = (
 				0795DB7B2CF797A0006EBBEF /* AppDelegate.swift */,
 				0795DB7D2CF797A0006EBBEF /* SceneDelegate.swift */,
-				0795DB7F2CF797A0006EBBEF /* ViewController.swift */,
-				0795DB812CF797A0006EBBEF /* Main.storyboard */,
-				0795DB842CF797A2006EBBEF /* Assets.xcassets */,
 				0795DB862CF797A2006EBBEF /* LaunchScreen.storyboard */,
 				0795DB892CF797A2006EBBEF /* Info.plist */,
+				0795DB912CF79C91006EBBEF /* Models */,
+				0795DB8F2CF79C7B006EBBEF /* Views */,
+				0795DB902CF79C83006EBBEF /* ViewModels */,
+				0795DB842CF797A2006EBBEF /* Assets.xcassets */,
 			);
 			path = "Mystic-Zest";
+			sourceTree = "<group>";
+		};
+		0795DB8F2CF79C7B006EBBEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0795DB812CF797A0006EBBEF /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0795DB902CF79C83006EBBEF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0795DB7F2CF797A0006EBBEF /* ViewController.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0795DB912CF79C91006EBBEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +330,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaiminraval.Mystic-Zest";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaiminraval.MysticZest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -339,7 +363,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaiminraval.Mystic-Zest";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaiminraval.MysticZest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
