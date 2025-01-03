@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0748FFCC2D2863EE003CBDFD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748FFCB2D2863EE003CBDFD /* HomeVC.swift */; };
 		0795DB7C2CF797A0006EBBEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0795DB7B2CF797A0006EBBEF /* AppDelegate.swift */; };
 		0795DB7E2CF797A0006EBBEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0795DB7D2CF797A0006EBBEF /* SceneDelegate.swift */; };
 		0795DB802CF797A0006EBBEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0795DB7F2CF797A0006EBBEF /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0748FFCB2D2863EE003CBDFD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0795DB782CF797A0006EBBEF /* Mystic-Zest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mystic-Zest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0795DB7B2CF797A0006EBBEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0795DB7D2CF797A0006EBBEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +60,6 @@
 			children = (
 				0795DB7B2CF797A0006EBBEF /* AppDelegate.swift */,
 				0795DB7D2CF797A0006EBBEF /* SceneDelegate.swift */,
-				0795DB862CF797A2006EBBEF /* LaunchScreen.storyboard */,
 				0795DB892CF797A2006EBBEF /* Info.plist */,
 				0795DB912CF79C91006EBBEF /* Models */,
 				0795DB8F2CF79C7B006EBBEF /* Views */,
@@ -72,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				0795DB812CF797A0006EBBEF /* Main.storyboard */,
+				0795DB862CF797A2006EBBEF /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				0795DB7F2CF797A0006EBBEF /* ViewController.swift */,
+				0748FFCB2D2863EE003CBDFD /* HomeVC.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0795DB802CF797A0006EBBEF /* ViewController.swift in Sources */,
+				0748FFCC2D2863EE003CBDFD /* HomeVC.swift in Sources */,
 				0795DB7C2CF797A0006EBBEF /* AppDelegate.swift in Sources */,
 				0795DB7E2CF797A0006EBBEF /* SceneDelegate.swift in Sources */,
 			);
