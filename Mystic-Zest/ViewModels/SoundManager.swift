@@ -19,5 +19,46 @@ class SoundManager: ObservableObject {
     private var currentBuffer: AVAudioPCMBuffer?
     private var audioFile: AVAudioFile?
     
+    @Published private(set) var isPlaying = false
+    @Published private(set) var currentTrackName: String?
+    @Published private(set) var isLoading = false
+    
+    private var remoteDataTask: URLSessionDataTask?
+    private var cancellables = Set<AnyCancellable>()
+    
+    private let audioQueue = DispatchQueue(label: "com.app.audioQueue", qos: .userInitiated)
+        
+    // Configuration
+    private var fadeInDuration: TimeInterval = 2.0
+    private var fadeOutDuration: TimeInterval = 1.5
+    private var volume: Float = 0.7
+    
+    // MARK: - Public Methods
+        
+        /// Play a track from the app's assets
+        /// - Parameter name: The name of the audio file in the app bundle
+        func playLocalTrack(named name: String, fileExtension: String = "mp3") {
+            guard currentTrackName != name || !isPlaying else { return }
+            
+            isLoading = true
+            currentTrackName = name
+            
+            audioQueue.async { [weak self] in
+                guard let self = self else { return }
+                
+                // Clean up any existing playback
+//                self.cleanupExistingPlayback()
+                
+                guard let url = Bundle.main.url(forResource: name, withExtension: fileExtension) else {
+                    DispatchQueue.main.async {
+                        self.isLoading = false
+                        print("Error: Could not find audio file named \(name).\(fileExtension)")
+                    }
+                    return
+                }
+//                
+//                self.setupAndPlayAudio(from: url)
+            }
+        }
     
 }
