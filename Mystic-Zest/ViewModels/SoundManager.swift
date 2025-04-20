@@ -61,4 +61,32 @@ class SoundManager: ObservableObject {
             }
         }
     
+    
+    
+    /// Pause the currently playing track with a fade-out effect
+        func pausePlayback() {
+            guard isPlaying else { return }
+
+        }
+        
+        /// Resume playback of a paused track with a fade-in effect
+        func resumePlayback() {
+            guard !isPlaying, playerNode != nil else { return }
+            
+
+        }
+        
+        /// Stop playback completely and release resources
+        func stopPlayback() {
+
+        }
+        
+        /// Set the volume level (0.0 to 1.0)
+        func setVolume(_ volume: Float) {
+            self.volume = max(0, min(1, volume))
+            mixerNode?.outputVolume = self.volume
+        }
+        
+        // MARK: - Private Methods
+    
 }
