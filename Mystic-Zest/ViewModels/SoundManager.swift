@@ -35,33 +35,72 @@ class SoundManager: ObservableObject {
     
     // MARK: - Public Methods
         
-        /// Play a track from the app's assets
-        /// - Parameter name: The name of the audio file in the app bundle
-        func playLocalTrack(named name: String, fileExtension: String = "mp3") {
-            guard currentTrackName != name || !isPlaying else { return }
+    /// Play a track from the app's assets
+    /// - Parameter name: The name of the audio file in the app bundle
+    func playLocalTrack(named name: String, fileExtension: String = "mp3") {
+        guard currentTrackName != name || !isPlaying else { return }
+        
+        isLoading = true
+        currentTrackName = name
+        
+        audioQueue.async { [weak self] in
+            guard let self = self else { return }
             
-            isLoading = true
-            currentTrackName = name
-            
-            audioQueue.async { [weak self] in
-                guard let self = self else { return }
-                
-                // Clean up any existing playback
+            // Clean up any existing playback
 //                self.cleanupExistingPlayback()
-                
-                guard let url = Bundle.main.url(forResource: name, withExtension: fileExtension) else {
-                    DispatchQueue.main.async {
-                        self.isLoading = false
-                        print("Error: Could not find audio file named \(name).\(fileExtension)")
-                    }
-                    return
+            
+            guard let url = Bundle.main.url(forResource: name, withExtension: fileExtension) else {
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                    print("Error: Could not find audio file named \(name).\(fileExtension)")
                 }
-//                
+                return
+            }
+//
 //                self.setupAndPlayAudio(from: url)
+        }
+    }
+    
+    // to play tracks from remote server
+    func playRemoteTrack(from urlString: String) {
+        guard let url = URL(string: urlString) else {
+            print("Error: Invalid URL string")
+            return
+        }
+        
+        isLoading = true
+        
+        // Cancel any existing download
+        remoteDataTask?.cancel()
+        
+        // Create a temporary file to store the audio data
+        let tempFileURL = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString + ".mp3")
+        
+        // Use a data task to download the file
+        remoteDataTask = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            guard let self = self, let data = data, error == nil else {
+                self?.isLoading = false
+                print("Error downloading audio: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+            
+            do {
+                try data.write(to: tempFileURL)
+                self.audioQueue.async {
+//                    self.cleanupExistingPlayback()
+//                    self.setupAndPlayAudio(from: tempFileURL)
+                    self.currentTrackName = url.lastPathComponent
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                    print("Error writing audio data: \(error.localizedDescription)")
+                }
             }
         }
-    
-    
+        
+        remoteDataTask?.resume()
+    }
     
     /// Pause the currently playing track with a fade-out effect
         func pausePlayback() {
