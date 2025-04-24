@@ -10,6 +10,7 @@
 		0748FFCC2D2863EE003CBDFD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748FFCB2D2863EE003CBDFD /* HomeVC.swift */; };
 		076661282DB1779F00115941 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076661272DB1779F00115941 /* SoundManager.swift */; };
 		078662AC2DAEDA170053DED7 /* SwippableHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078662AB2DAEDA170053DED7 /* SwippableHomeView.swift */; };
+		079189362DB815BB0003B953 /* SoothGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079189352DB815BB0003B953 /* SoothGradientView.swift */; };
 		0795DB7C2CF797A0006EBBEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0795DB7B2CF797A0006EBBEF /* AppDelegate.swift */; };
 		0795DB7E2CF797A0006EBBEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0795DB7D2CF797A0006EBBEF /* SceneDelegate.swift */; };
 		0795DB802CF797A0006EBBEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0795DB7F2CF797A0006EBBEF /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		0748FFCB2D2863EE003CBDFD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		076661272DB1779F00115941 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		078662AB2DAEDA170053DED7 /* SwippableHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwippableHomeView.swift; sourceTree = "<group>"; };
+		079189352DB815BB0003B953 /* SoothGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoothGradientView.swift; sourceTree = "<group>"; };
 		0795DB782CF797A0006EBBEF /* Mystic-Zest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mystic-Zest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0795DB7B2CF797A0006EBBEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0795DB7D2CF797A0006EBBEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				0795DB812CF797A0006EBBEF /* Main.storyboard */,
 				0795DB862CF797A2006EBBEF /* LaunchScreen.storyboard */,
 				078662AB2DAEDA170053DED7 /* SwippableHomeView.swift */,
+				079189352DB815BB0003B953 /* SoothGradientView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				0748FFCC2D2863EE003CBDFD /* HomeVC.swift in Sources */,
 				0795DB7C2CF797A0006EBBEF /* AppDelegate.swift in Sources */,
 				0795DB7E2CF797A0006EBBEF /* SceneDelegate.swift in Sources */,
+				079189362DB815BB0003B953 /* SoothGradientView.swift in Sources */,
 				076661282DB1779F00115941 /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
