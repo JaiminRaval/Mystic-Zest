@@ -10,14 +10,8 @@ import SwiftUI
 struct SmoothGradientView: View {
     var colors: [Color]
         
-    // Animation properties
-    private let animationDuration: Double = 8.0
-    private let movementScale: CGFloat = 0.2
-    
-    // State for animation
-    @State private var phase: CGFloat = 0.0
-    @State private var noiseScale: CGFloat = 25.0
-    @State private var noisePhase: CGFloat = 0.0
+    @State var t: Float = 0.0
+    @State var timer: Timer?
     
     init(hexColors: [String]) {
         // Convert hex strings to Color objects
@@ -25,23 +19,45 @@ struct SmoothGradientView: View {
         }
     var body: some View {
         ZStack {
-            GeometryReader { geometry in
-                // Updated MeshGradient with correct parameters
-                
-            }
-            .onAppear {
-                // Animated phase for smooth transitions
-                withAnimation(
-                    .easeInOut(duration: animationDuration)
-                    .repeatForever(autoreverses: true)
-                ) {
-                    phase = 2 * .pi
-                    noiseScale = 35.0
+            if #available(iOS 18.0, *) {
+                MeshGradient(width: 3, height: 3, points: [
+                    .init(0, 0), .init(0.5, 0), .init(1, 0),
+                    
+                    [sinInRange(-0.8...(-0.2), offset: 0.439, timeScale: 0.342, t: t),
+                     sinInRange(0.3...0.7, offset: 3.42, timeScale: 0.984, t: t)],
+                    [sinInRange(0.1...0.8, offset: 0.239, timeScale: 0.084, t: t),
+                     sinInRange(0.2...0.8, offset: 5.21, timeScale: 0.242, t: t)],
+                    [sinInRange(1.0...1.5, offset: 0.939, timeScale: 0.084, t: t),
+                     sinInRange(0.4...0.8, offset: 0.25, timeScale: 0.642, t: t)],
+                    [sinInRange(-0.8...0.0, offset: 1.439, timeScale: 0.442, t: t),
+                     sinInRange(1.4...1.9, offset: 3.42, timeScale: 0.984, t: t)],
+                    [sinInRange(0.3...0.6, offset: 0.339, timeScale: 0.784, t: t),
+                     sinInRange(1.0...1.2, offset: 1.22, timeScale: 0.772, t: t)],
+                    [sinInRange(1.0...1.5, offset: 0.939, timeScale: 0.056, t: t),
+                     sinInRange(1.3...1.7, offset: 0.47, timeScale: 0.342, t: t)]
+                ], colors: [
+                    .red, .purple, .indigo,
+                    .orange, .white, .blue,
+                    .orange, .black, .mint
+                ])
+                .onAppear {
+                    timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { _ in
+                        t += 0.02
+                    }
                 }
+                .background(.black)
+                .ignoresSafeArea()
+            } else {
+                // Fallback on earlier versions
             }
             
             
         }
+    }
+    func sinInRange(_ range: ClosedRange<Float>, offset: Float, timeScale: Float, t: Float) -> Float {
+        let amplitude = (range.upperBound - range.lowerBound) / 2
+        let midPoint = (range.upperBound + range.lowerBound) / 2
+        return midPoint + amplitude * sin(timeScale * t + offset)
     }
 }
 
