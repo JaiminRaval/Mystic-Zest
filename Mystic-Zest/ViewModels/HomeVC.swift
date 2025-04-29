@@ -21,13 +21,7 @@ class HomeVC: UIHostingController<SwippableHomeView> {
 }
 
 
-
 /* Steps to remove storyBoard from UIKit project:
     1. delete main.storyboard file and their respective VCs
     2. delete "storyboard name" key-value from info.plist; find it in this path(as of APR 2025): info.plist -> app scene manifest -> scene configuration -> item 0 -> storyboard name
-
- 
- 
- 
- 
  */
