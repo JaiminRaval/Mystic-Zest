@@ -33,18 +33,6 @@ struct SwippableHomeView: View {
                 
                 VStack {
                     Spacer()
-                    HStack {
-                        Image(systemName: "chevron.left")
-                            .opacity(isDragging && dragOffset < 0 ? 1.0 : 0.3)
-                        
-                        Spacer()
-                        
-                        Image(systemName: "chevron.right")
-                            .opacity(isDragging && dragOffset > 0 ? 1.0 : 0.3)
-                    }
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .padding(40)
                     
                     Text("Swipe to change colors")
                         .font(.headline)
