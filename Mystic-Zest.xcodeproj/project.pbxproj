@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070E45002DD7AFA700FB94DD /* Wave in Frameworks */ = {isa = PBXBuildFile; productRef = 070E44FF2DD7AFA700FB94DD /* Wave */; };
 		0748FFCC2D2863EE003CBDFD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748FFCB2D2863EE003CBDFD /* HomeVC.swift */; };
 		076661282DB1779F00115941 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076661272DB1779F00115941 /* SoundManager.swift */; };
 		078662AC2DAEDA170053DED7 /* SwippableHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078662AB2DAEDA170053DED7 /* SwippableHomeView.swift */; };
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				070E45002DD7AFA700FB94DD /* Wave in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +143,9 @@
 				Base,
 			);
 			mainGroup = 0795DB6F2CF797A0006EBBEF;
+			packageReferences = (
+				070E44FE2DD7AFA700FB94DD /* XCRemoteSwiftPackageReference "Wave" */,
+			);
 			productRefGroup = 0795DB792CF797A0006EBBEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -397,6 +402,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		070E44FE2DD7AFA700FB94DD /* XCRemoteSwiftPackageReference "Wave" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jtrivedi/Wave";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		070E44FF2DD7AFA700FB94DD /* Wave */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 070E44FE2DD7AFA700FB94DD /* XCRemoteSwiftPackageReference "Wave" */;
+			productName = Wave;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0795DB702CF797A0006EBBEF /* Project object */;
 }
