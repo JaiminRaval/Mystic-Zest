@@ -16,6 +16,7 @@
 		0795DB7E2CF797A0006EBBEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0795DB7D2CF797A0006EBBEF /* SceneDelegate.swift */; };
 		0795DB852CF797A2006EBBEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0795DB842CF797A2006EBBEF /* Assets.xcassets */; };
 		0795DB882CF797A2006EBBEF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0795DB872CF797A2006EBBEF /* Base */; };
+		07CB2BE12E3FD463002927BF /* LiveActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB2BE02E3FD463002927BF /* LiveActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		0795DB842CF797A2006EBBEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0795DB872CF797A2006EBBEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0795DB892CF797A2006EBBEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07CB2BE02E3FD463002927BF /* LiveActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				0795DB862CF797A2006EBBEF /* LaunchScreen.storyboard */,
 				078662AB2DAEDA170053DED7 /* SwippableHomeView.swift */,
 				079189352DB815BB0003B953 /* SmoothGradientView.swift */,
+				07CB2BE02E3FD463002927BF /* LiveActivityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				0795DB7E2CF797A0006EBBEF /* SceneDelegate.swift in Sources */,
 				079189362DB815BB0003B953 /* SmoothGradientView.swift in Sources */,
 				076661282DB1779F00115941 /* SoundManager.swift in Sources */,
+				07CB2BE12E3FD463002927BF /* LiveActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
