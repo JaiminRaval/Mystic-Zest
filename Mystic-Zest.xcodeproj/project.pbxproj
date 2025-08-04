@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		070E45002DD7AFA700FB94DD /* Wave in Frameworks */ = {isa = PBXBuildFile; productRef = 070E44FF2DD7AFA700FB94DD /* Wave */; };
+		071B69062E4132EE00394F46 /* ActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071B69052E4132EE00394F46 /* ActivityAttributes.swift */; };
 		0748FFCC2D2863EE003CBDFD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748FFCB2D2863EE003CBDFD /* HomeVC.swift */; };
 		076661282DB1779F00115941 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076661272DB1779F00115941 /* SoundManager.swift */; };
 		078662AC2DAEDA170053DED7 /* SwippableHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078662AB2DAEDA170053DED7 /* SwippableHomeView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071B69052E4132EE00394F46 /* ActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityAttributes.swift; sourceTree = "<group>"; };
 		0748FFCB2D2863EE003CBDFD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		076661272DB1779F00115941 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		078662AB2DAEDA170053DED7 /* SwippableHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwippableHomeView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				0795DB912CF79C91006EBBEF /* Models */,
 				0795DB8F2CF79C7B006EBBEF /* Views */,
 				0795DB902CF79C83006EBBEF /* ViewModels */,
+				07CB2BE22E3FD495002927BF /* Widgets */,
 				0795DB842CF797A2006EBBEF /* Assets.xcassets */,
 			);
 			path = "Mystic-Zest";
@@ -98,8 +101,16 @@
 		0795DB912CF79C91006EBBEF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				071B69052E4132EE00394F46 /* ActivityAttributes.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		07CB2BE22E3FD495002927BF /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 				079189362DB815BB0003B953 /* SmoothGradientView.swift in Sources */,
 				076661282DB1779F00115941 /* SoundManager.swift in Sources */,
 				07CB2BE12E3FD463002927BF /* LiveActivityView.swift in Sources */,
+				071B69062E4132EE00394F46 /* ActivityAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
