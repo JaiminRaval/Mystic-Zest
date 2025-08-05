@@ -7,17 +7,17 @@
 
 import ActivityKit
 
-struct ZestActivityAttributes: ActivityAttributes {
-    
-//    typealias ContentState =
-
-    public struct contentState: Codable, Hashable {
-        var progress: Double
-        
-    }
-    
-    var title: String
-    
-    
-    
-}
+//struct ZestActivityAttributes: ActivityAttributes {
+//    
+////    typealias ContentStvate =
+//
+//    public struct contentState: Codable, Hashable {
+//        var progress: Double
+//        
+//    }
+//    
+//    var title: String
+//    
+//    
+//    
+//}

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		071B69062E4132EE00394F46 /* ActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071B69052E4132EE00394F46 /* ActivityAttributes.swift */; };
 		0748FFCC2D2863EE003CBDFD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748FFCB2D2863EE003CBDFD /* HomeVC.swift */; };
 		076661282DB1779F00115941 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076661272DB1779F00115941 /* SoundManager.swift */; };
+		077043562E42834700AF423C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077043552E42834700AF423C /* WidgetKit.framework */; };
+		077043582E42834700AF423C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077043572E42834700AF423C /* SwiftUI.framework */; };
+		077043672E42834900AF423C /* Activity-WidgitExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 077043532E42834700AF423C /* Activity-WidgitExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		078662AC2DAEDA170053DED7 /* SwippableHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078662AB2DAEDA170053DED7 /* SwippableHomeView.swift */; };
 		079189362DB815BB0003B953 /* SmoothGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079189352DB815BB0003B953 /* SmoothGradientView.swift */; };
 		0795DB7C2CF797A0006EBBEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0795DB7B2CF797A0006EBBEF /* AppDelegate.swift */; };
@@ -20,10 +23,37 @@
 		07CB2BE12E3FD463002927BF /* LiveActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB2BE02E3FD463002927BF /* LiveActivityView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		077043652E42834900AF423C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0795DB702CF797A0006EBBEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 077043522E42834700AF423C;
+			remoteInfo = "Activity-WidgitExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0770436C2E42834900AF423C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				077043672E42834900AF423C /* Activity-WidgitExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		071B69052E4132EE00394F46 /* ActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityAttributes.swift; sourceTree = "<group>"; };
 		0748FFCB2D2863EE003CBDFD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		076661272DB1779F00115941 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		077043532E42834700AF423C /* Activity-WidgitExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Activity-WidgitExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		077043552E42834700AF423C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		077043572E42834700AF423C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		078662AB2DAEDA170053DED7 /* SwippableHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwippableHomeView.swift; sourceTree = "<group>"; };
 		079189352DB815BB0003B953 /* SmoothGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothGradientView.swift; sourceTree = "<group>"; };
 		0795DB782CF797A0006EBBEF /* Mystic-Zest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mystic-Zest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +65,30 @@
 		07CB2BE02E3FD463002927BF /* LiveActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		077043682E42834900AF423C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 077043522E42834700AF423C /* Activity-WidgitExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		077043592E42834700AF423C /* Activity-Widgit */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (077043682E42834900AF423C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Activity-Widgit"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		077043502E42834700AF423C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				077043582E42834700AF423C /* SwiftUI.framework in Frameworks */,
+				077043562E42834700AF423C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0795DB752CF797A0006EBBEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,10 +100,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		077043542E42834700AF423C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				077043552E42834700AF423C /* WidgetKit.framework */,
+				077043572E42834700AF423C /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0795DB6F2CF797A0006EBBEF = {
 			isa = PBXGroup;
 			children = (
 				0795DB7A2CF797A0006EBBEF /* Mystic-Zest */,
+				077043592E42834700AF423C /* Activity-Widgit */,
+				077043542E42834700AF423C /* Frameworks */,
 				0795DB792CF797A0006EBBEF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				0795DB782CF797A0006EBBEF /* Mystic-Zest.app */,
+				077043532E42834700AF423C /* Activity-WidgitExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +181,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		077043522E42834700AF423C /* Activity-WidgitExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 077043692E42834900AF423C /* Build configuration list for PBXNativeTarget "Activity-WidgitExtension" */;
+			buildPhases = (
+				0770434F2E42834700AF423C /* Sources */,
+				077043502E42834700AF423C /* Frameworks */,
+				077043512E42834700AF423C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				077043592E42834700AF423C /* Activity-Widgit */,
+			);
+			name = "Activity-WidgitExtension";
+			packageProductDependencies = (
+			);
+			productName = "Activity-WidgitExtension";
+			productReference = 077043532E42834700AF423C /* Activity-WidgitExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		0795DB772CF797A0006EBBEF /* Mystic-Zest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0795DB8C2CF797A2006EBBEF /* Build configuration list for PBXNativeTarget "Mystic-Zest" */;
@@ -123,10 +210,12 @@
 				0795DB742CF797A0006EBBEF /* Sources */,
 				0795DB752CF797A0006EBBEF /* Frameworks */,
 				0795DB762CF797A0006EBBEF /* Resources */,
+				0770436C2E42834900AF423C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				077043662E42834900AF423C /* PBXTargetDependency */,
 			);
 			name = "Mystic-Zest";
 			productName = "Mystic-Zest";
@@ -140,9 +229,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					077043522E42834700AF423C = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					0795DB772CF797A0006EBBEF = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -165,11 +257,19 @@
 			projectRoot = "";
 			targets = (
 				0795DB772CF797A0006EBBEF /* Mystic-Zest */,
+				077043522E42834700AF423C /* Activity-WidgitExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		077043512E42834700AF423C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0795DB762CF797A0006EBBEF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,6 +282,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0770434F2E42834700AF423C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0795DB742CF797A0006EBBEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,6 +306,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		077043662E42834900AF423C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 077043522E42834700AF423C /* Activity-WidgitExtension */;
+			targetProxy = 077043652E42834900AF423C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		0795DB862CF797A2006EBBEF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -211,6 +326,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0770436A2E42834900AF423C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GTQTB4VDX4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Activity-Widgit/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Activity-Widgit";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jaiminraval.MysticZest.Activity-Widgit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0770436B2E42834900AF423C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GTQTB4VDX4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Activity-Widgit/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Activity-Widgit";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jaiminraval.MysticZest.Activity-Widgit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		0795DB8A2CF797A2006EBBEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -399,6 +570,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		077043692E42834900AF423C /* Build configuration list for PBXNativeTarget "Activity-WidgitExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0770436A2E42834900AF423C /* Debug */,
+				0770436B2E42834900AF423C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0795DB732CF797A0006EBBEF /* Build configuration list for PBXProject "Mystic-Zest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
